@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/04/18/markdown常用操作/王道长.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/04/18/markdown常用操作/王道长.PNG">
-<meta property="og:updated_time" content="2019-04-19T03:51:58.570Z">
+<meta property="og:updated_time" content="2019-04-19T06:16:55.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown常用操作">
 <meta name="twitter:description" content="Markdown是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。  一、标题12345# 一级标题##">
@@ -467,6 +467,70 @@
 <hr>
 <h2 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h2><p>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用<code>&lt;em&gt;</code>标签,你可以在星号的前面加上反斜杠：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\*literal asterisks\*</span><br></pre></td></tr></table></figure></p>
 <p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure></p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">-----|-----|-----</span><br><span class="line">v1|v2|v3 </span><br><span class="line">v1|v2|v3</span><br><span class="line">v1|v2|v3</span><br><span class="line">v1|v2|v3</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+<th>表头3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v1</td>
+<td>v2</td>
+<td>v3 </td>
+</tr>
+<tr>
+<td>v1</td>
+<td>v2</td>
+<td>v3</td>
+</tr>
+<tr>
+<td>v1</td>
+<td>v2</td>
+<td>v3</td>
+</tr>
+<tr>
+<td>v1</td>
+<td>v2</td>
+<td>v3</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">表头1|表头2|表头3</span><br><span class="line">:-----|-----:|-----:</span><br><span class="line">v1|v2|v3 </span><br><span class="line">v1|v2|v3</span><br><span class="line">v1|v2|v3</span><br><span class="line">v1|v2|v3</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">表头1</th>
+<th style="text-align:right">表头2</th>
+<th style="text-align:right">表头3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">v1</td>
+<td style="text-align:right">v2</td>
+<td style="text-align:right">v3 </td>
+</tr>
+<tr>
+<td style="text-align:left">v1</td>
+<td style="text-align:right">v2</td>
+<td style="text-align:right">v3</td>
+</tr>
+<tr>
+<td style="text-align:left">v1</td>
+<td style="text-align:right">v2</td>
+<td style="text-align:right">v3</td>
+</tr>
+<tr>
+<td style="text-align:left">v1</td>
+<td style="text-align:right">v2</td>
+<td style="text-align:right">v3</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -625,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、标题"><span class="nav-number">1.</span> <span class="nav-text">一、标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、引用"><span class="nav-number">2.</span> <span class="nav-text">二、引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、列表"><span class="nav-number">3.</span> <span class="nav-text">三、列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1无序列表"><span class="nav-number">3.1.</span> <span class="nav-text">3.1无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2有序列表"><span class="nav-number">3.2.</span> <span class="nav-text">3.2有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、图片和连接"><span class="nav-number">4.</span> <span class="nav-text">四、图片和连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1图片"><span class="nav-number">4.1.</span> <span class="nav-text">4.1图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2连接"><span class="nav-number">4.2.</span> <span class="nav-text">4.2连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、斜体和粗体"><span class="nav-number">5.</span> <span class="nav-text">五、斜体和粗体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、分割线"><span class="nav-number">6.</span> <span class="nav-text">六、分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反斜杠"><span class="nav-number">7.</span> <span class="nav-text">反斜杠</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、标题"><span class="nav-number">1.</span> <span class="nav-text">一、标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、引用"><span class="nav-number">2.</span> <span class="nav-text">二、引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、列表"><span class="nav-number">3.</span> <span class="nav-text">三、列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1无序列表"><span class="nav-number">3.1.</span> <span class="nav-text">3.1无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2有序列表"><span class="nav-number">3.2.</span> <span class="nav-text">3.2有序列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、图片和连接"><span class="nav-number">4.</span> <span class="nav-text">四、图片和连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1图片"><span class="nav-number">4.1.</span> <span class="nav-text">4.1图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2连接"><span class="nav-number">4.2.</span> <span class="nav-text">4.2连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、斜体和粗体"><span class="nav-number">5.</span> <span class="nav-text">五、斜体和粗体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、分割线"><span class="nav-number">6.</span> <span class="nav-text">六、分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反斜杠"><span class="nav-number">7.</span> <span class="nav-text">反斜杠</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">8.</span> <span class="nav-text">表格</span></a></li></ol></div>
             
 
           </div>
