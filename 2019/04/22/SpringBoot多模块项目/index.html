@@ -93,12 +93,14 @@
 <meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/4.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/5.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/11.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/12.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/13.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/6.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/7.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/8.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/9.PNG">
 <meta property="og:image" content="http://yoursite.com/2019/04/22/SpringBoot多模块项目/10.PNG">
-<meta property="og:updated_time" content="2019-04-24T02:10:58.481Z">
+<meta property="og:updated_time" content="2019-04-24T02:25:56.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot多模块项目">
 <meta name="twitter:description" content="一、创建SpringBoot项目码云地址 使用Idea创建一个SpringBoot项目,目前只添加了web和test依赖，创建完成结构如下图 删除src和一些无用的东西 二、创建子模块右键上一步建的项目，选择New-&amp;gt;Module 选择Spring Initializr创建子SpringBoot项目 创建三个子项目123dataserviceweb 创建完成后项目的结构图：  data用于数">
@@ -438,6 +440,11 @@
 <h2 id="三、项目的打包"><a href="#三、项目的打包" class="headerlink" title="三、项目的打包"></a>三、项目的打包</h2><p>项目的打包，只需要在web模块，所以，不管是父项目还是data、service子模块中的pom.xml都不需要添加spring-boot-maven-plugin插件只需要在web模块添加</p>
 <p><img src="/2019/04/22/SpringBoot多模块项目/11.PNG" alt="gg"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">	&lt;plugins&gt;</span><br><span class="line">		&lt;plugin&gt;</span><br><span class="line">			&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;</span><br><span class="line">			&lt;version&gt;2.21.0&lt;/version&gt;</span><br><span class="line">			&lt;configuration&gt;</span><br><span class="line">				&lt;testFailureIgnore&gt;true&lt;/testFailureIgnore&gt;</span><br><span class="line">				&lt;!--跳过测试运行--&gt;</span><br><span class="line">				&lt;skipTests&gt;true&lt;/skipTests&gt;</span><br><span class="line">			&lt;/configuration&gt;</span><br><span class="line">		&lt;/plugin&gt;</span><br><span class="line">		&lt;plugin&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">		&lt;/plugin&gt;</span><br><span class="line">	&lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>
+<p>然后再Idea窗口的右边点击<code>Maven Projects</code>,选择父项目<code>springboot-modele</code>(带一个root的),展开<code>Lifecycle</code>，点击<code>package</code>,则开始进行项目的打包。</p>
+<p><img src="/2019/04/22/SpringBoot多模块项目/12.PNG" alt="gg"></p>
+<p>打包完都提示全部成功，就可以在web模块下的target文件夹下有打包完成的jar包。</p>
+<p><img src="/2019/04/22/SpringBoot多模块项目/13.PNG" alt="gg"></p>
+<p>可用下面命令运行该jar包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar web-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure></p>
 <h2 id="四、遇到的问题"><a href="#四、遇到的问题" class="headerlink" title="四、遇到的问题"></a>四、遇到的问题</h2><h3 id="service模块无法注入data模块的repo类-data模块用的是jpa-web模块无法注入service模块的service类"><a href="#service模块无法注入data模块的repo类-data模块用的是jpa-web模块无法注入service模块的service类" class="headerlink" title="service模块无法注入data模块的repo类(data模块用的是jpa),web模块无法注入service模块的service类"></a>service模块无法注入data模块的repo类(data模块用的是jpa),web模块无法注入service模块的service类</h3><p>一开始怀疑是没扫描到该层的包，所以在web子模块的WebApplication类上增加注解<code>@ComponentScan(&quot;com.xpp&quot;)</code>不起作用,最后搜索到一篇文章。<br>解决方法：移动web模块的WebApplication类</p>
 <p>一开始WebApplication类的位置如图：</p>
 <p><img src="/2019/04/22/SpringBoot多模块项目/6.PNG" alt="gg"></p>
