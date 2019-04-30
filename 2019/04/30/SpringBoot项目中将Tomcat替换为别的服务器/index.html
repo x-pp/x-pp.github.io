@@ -79,33 +79,24 @@
 
 
 
-<meta name="description" content="New-&amp;gt;Project..    选择SpringBoot Initializr  填写项目基本信息  选择依赖，目前只选择一个Web  选择项目创建路径  创建完成项目的结构     项目默认扫描Demo01Application类下的Bean,所以在com.xpp.demo01包下建一个controller包,右键com.xpp.demo01包,New-&amp;gt;Package  填写">
+<meta name="description" content="SpringBoot项目中替换Tomcat服务器非常简单。只需要修改pom.xml文件就行了  还是使用我们之前创建的SpringBoot基础项目，IDEA中创建SpringBoot项目 Tomcat为服务器时，项目启动控制台输入为 替换为jetty服务器修改pom.xml文件原来的pom.xml文件修改pom.xml为如下,修改的地方已经框起来了。然后点击右下角Import Changes更新">
 <meta name="keywords" content="自学SpringBoot、SpringCloud等笔记站点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IDEA中创建SpringBoot项目">
-<meta property="og:url" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/index.html">
+<meta property="og:title" content="SpringBoot项目中将Tomcat替换为别的服务器">
+<meta property="og:url" content="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/index.html">
 <meta property="og:site_name" content="xpp的博客">
-<meta property="og:description" content="New-&amp;gt;Project..    选择SpringBoot Initializr  填写项目基本信息  选择依赖，目前只选择一个Web  选择项目创建路径  创建完成项目的结构     项目默认扫描Demo01Application类下的Bean,所以在com.xpp.demo01包下建一个controller包,右键com.xpp.demo01包,New-&amp;gt;Package  填写">
+<meta property="og:description" content="SpringBoot项目中替换Tomcat服务器非常简单。只需要修改pom.xml文件就行了  还是使用我们之前创建的SpringBoot基础项目，IDEA中创建SpringBoot项目 Tomcat为服务器时，项目启动控制台输入为 替换为jetty服务器修改pom.xml文件原来的pom.xml文件修改pom.xml为如下,修改的地方已经框起来了。然后点击右下角Import Changes更新">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/1.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/2.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/3.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/4.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/5.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/6.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/7.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/8.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/9.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/10.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/11.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/12.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/13.PNG">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/14.PNG">
-<meta property="og:updated_time" content="2019-04-30T05:57:09.926Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a1.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a2.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a4.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a5.PNG">
+<meta property="og:image" content="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a6.PNG">
+<meta property="og:updated_time" content="2019-04-30T07:55:03.307Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IDEA中创建SpringBoot项目">
-<meta name="twitter:description" content="New-&amp;gt;Project..    选择SpringBoot Initializr  填写项目基本信息  选择依赖，目前只选择一个Web  选择项目创建路径  创建完成项目的结构     项目默认扫描Demo01Application类下的Bean,所以在com.xpp.demo01包下建一个controller包,右键com.xpp.demo01包,New-&amp;gt;Package  填写">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/1.PNG">
+<meta name="twitter:title" content="SpringBoot项目中将Tomcat替换为别的服务器">
+<meta name="twitter:description" content="SpringBoot项目中替换Tomcat服务器非常简单。只需要修改pom.xml文件就行了  还是使用我们之前创建的SpringBoot基础项目，IDEA中创建SpringBoot项目 Tomcat为服务器时，项目启动控制台输入为 替换为jetty服务器修改pom.xml文件原来的pom.xml文件修改pom.xml为如下,修改的地方已经框起来了。然后点击右下角Import Changes更新">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a1.PNG">
 
 
 
@@ -135,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/">
 
 
 
 
 
-  <title>IDEA中创建SpringBoot项目 | xpp的博客</title>
+  <title>SpringBoot项目中将Tomcat替换为别的服务器 | xpp的博客</title>
   
 
 
@@ -290,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/30/IDEA中创建SpringBoot项目/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="_xpp">
@@ -307,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">IDEA中创建SpringBoot项目</h1>
+          <h1 class="post-title" itemprop="name headline">SpringBoot项目中将Tomcat替换为别的服务器</h1>
         
 
         <div class="post-meta">
@@ -319,7 +310,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-30T09:41:54+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-30T15:29:00+08:00">
                 2019-04-30
               </time>
             
@@ -360,8 +351,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/30/IDEA中创建SpringBoot项目/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/30/IDEA中创建SpringBoot项目/" itemprop="commentCount"></span>
+                <a href="/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -425,43 +416,20 @@
       
 
       
-        <ol>
-<li>New-&gt;Project..</li>
-</ol>
-<p><img src="/2019/04/30/IDEA中创建SpringBoot项目/1.PNG" alt="gg"></p>
-<ol start="2">
-<li><p>选择SpringBoot Initializr<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/2.PNG" alt="gg"></p>
-</li>
-<li><p>填写项目基本信息<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/3.PNG" alt="gg"></p>
-</li>
-<li><p>选择依赖，目前只选择一个Web<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/4.PNG" alt="gg"></p>
-</li>
-<li><p>选择项目创建路径<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/5.PNG" alt="gg"></p>
-</li>
-<li><p>创建完成项目的结构</p>
-</li>
-</ol>
-<p><img src="/2019/04/30/IDEA中创建SpringBoot项目/6.PNG" alt="gg"></p>
-<ol start="7">
-<li><p>项目默认扫描<code>Demo01Application</code>类下的Bean,所以在<code>com.xpp.demo01</code>包下建一个<code>controller</code>包,右键<code>com.xpp.demo01</code>包,New-&gt;Package<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/7.PNG" alt="gg"></p>
-</li>
-<li><p>填写创建的包名<code>controller</code></p>
-</li>
-</ol>
-<p><img src="/2019/04/30/IDEA中创建SpringBoot项目/8.PNG" alt="gg"></p>
-<ol start="9">
-<li><p>在上一步创建的<code>controller</code>包下创建一个<code>HelloController</code>类<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/9.PNG" alt="gg"></p>
-</li>
-<li><p><code>HelloController</code>类中代码如下<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/10.PNG" alt="gg"></p>
-</li>
-<li>启动项目方法1<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/11.PNG" alt="gg"></li>
-<li>启动项目方法2</li>
-</ol>
-<p><img src="/2019/04/30/IDEA中创建SpringBoot项目/12.png" alt="gg"></p>
-<ol start="13">
-<li>控制台打印信息<br><img src="/2019/04/30/IDEA中创建SpringBoot项目/13.PNG" alt="gg"></li>
-<li>浏览器访问<code>http://localhost:8080/hello/speak</code><br><img src="/2019/04/30/IDEA中创建SpringBoot项目/14.PNG" alt="gg"></li>
-</ol>
+        <blockquote>
+<p>SpringBoot项目中替换Tomcat服务器非常简单。只需要修改pom.xml文件就行了</p>
+</blockquote>
+<p>还是使用我们之前创建的SpringBoot基础项目，<a href="https://x-pp.github.io/2019/04/30/IDEA%E4%B8%AD%E5%88%9B%E5%BB%BASpringBoot%E9%A1%B9%E7%9B%AE/" target="_blank" rel="noopener">IDEA中创建SpringBoot项目</a></p>
+<p>Tomcat为服务器时，项目启动控制台输入为<br><img src="/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a1.PNG" alt="gg"></p>
+<h2 id="替换为jetty服务器"><a href="#替换为jetty服务器" class="headerlink" title="替换为jetty服务器"></a>替换为jetty服务器</h2><h3 id="修改pom-xml文件"><a href="#修改pom-xml文件" class="headerlink" title="修改pom.xml文件"></a>修改pom.xml文件</h3><p>原来的pom.xml文件<br><img src="/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a2.PNG" alt="gg"><br>修改pom.xml为如下,修改的地方已经框起来了。然后点击右下角<code>Import Changes</code>更新依赖<br><img src="/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a4.PNG" alt="gg"><br>原理：</p>
+<blockquote>
+<p>因为SpringBoot项目默认是使用Tomcat作为服务器,所以我们在spring-boot-starter-web依赖中移除tomcat的依赖，然后增加jetty依赖，项目就会使用jetty作为服务器。</p>
+</blockquote>
+<h3 id="重新启动项目"><a href="#重新启动项目" class="headerlink" title="重新启动项目"></a>重新启动项目</h3><p>控制台输出信息发现由之前的Tomcat变成了Jetty<br><img src="/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a5.PNG" alt="gg"><br>至此，将Tomcat改造成Jetty服务器已经完成。</p>
+<h2 id="替换成Undertow服务器"><a href="#替换成Undertow服务器" class="headerlink" title="替换成Undertow服务器"></a>替换成Undertow服务器</h2><blockquote>
+<p>Undertow是一个红帽公司开源的java服务器，具有非常好的性能，在SpringBoot中也得到了很好的支持，配置方式与Jetty类似，只需要将Jetty依赖改成Undertow</p>
+</blockquote>
+<p><img src="/2019/04/30/SpringBoot项目中将Tomcat替换为别的服务器/a6.PNG" alt="gg"></p>
 
       
     </div>
@@ -486,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/22/SpringBoot多模块项目/" rel="next" title="SpringBoot多模块项目">
-                <i class="fa fa-chevron-left"></i> SpringBoot多模块项目
+              <a href="/2019/04/30/SpringBoot项目中配置https/" rel="next" title="SpringBoot项目中配置https">
+                <i class="fa fa-chevron-left"></i> SpringBoot项目中配置https
               </a>
             
           </div>
@@ -495,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/30/SpringBoot项目中配置https/" rel="prev" title="SpringBoot项目中配置https">
-                SpringBoot项目中配置https <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -605,6 +578,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#替换为jetty服务器"><span class="nav-number">1.</span> <span class="nav-text">替换为jetty服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改pom-xml文件"><span class="nav-number">1.1.</span> <span class="nav-text">修改pom.xml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重新启动项目"><span class="nav-number">1.2.</span> <span class="nav-text">重新启动项目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#替换成Undertow服务器"><span class="nav-number">2.</span> <span class="nav-text">替换成Undertow服务器</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
