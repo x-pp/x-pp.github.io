@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IDEA中创建SpringBoot项目]]></title>
+    <url>%2F2019%2F04%2F30%2FIDEA%E4%B8%AD%E5%88%9B%E5%BB%BASpringBoot%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[New-&gt;Project.. 选择SpringBoot Initializr 填写项目基本信息 选择依赖，目前只选择一个Web 选择项目创建路径 创建完成项目的结构 项目默认扫描Demo01Application类下的Bean,所以在com.xpp.demo01包下建一个controller包,右键com.xpp.demo01包,New-&gt;Package 填写创建的包名controller 在上一步创建的controller包下创建一个HelloController类 HelloController类中代码如下 启动项目方法1 启动项目方法2 控制台打印信息 浏览器访问http://localhost:8080/hello/speak]]></content>
+      <categories>
+        <category>SpringBoot</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[SpringBoot多模块项目]]></title>
     <url>%2F2019%2F04%2F22%2FSpringBoot%E5%A4%9A%E6%A8%A1%E5%9D%97%E9%A1%B9%E7%9B%AE%2F</url>
     <content type="text"><![CDATA[一、创建SpringBoot项目码云地址 使用Idea创建一个SpringBoot项目,目前只添加了web和test依赖，创建完成结构如下图 删除src和一些无用的东西 二、创建子模块右键上一步建的项目，选择New-&gt;Module 选择Spring Initializr创建子SpringBoot项目 创建三个子项目123dataserviceweb 创建完成后项目的结构图： data用于数据访问层 service为业务层,该模块依赖data模块 web为前端提供api接口,该模块依赖service模块 各个模块的代码，详情码云 三、项目的打包项目的打包，只需要在web模块，所以，不管是父项目还是data、service子模块中的pom.xml都不需要添加spring-boot-maven-plugin插件只需要在web模块添加 123456789101112131415161718&lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt; &lt;version&gt;2.21.0&lt;/version&gt; &lt;configuration&gt; &lt;testFailureIgnore&gt;true&lt;/testFailureIgnore&gt; &lt;!--跳过测试运行--&gt; &lt;skipTests&gt;true&lt;/skipTests&gt; &lt;/configuration&gt; &lt;/plugin&gt; &lt;plugin&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt; &lt;/plugin&gt; &lt;/plugins&gt;&lt;/build&gt; 然后再Idea窗口的右边点击Maven Projects,选择父项目springboot-modele(带一个root的),展开Lifecycle，点击package,则开始进行项目的打包。 打包完都提示全部成功，就可以在web模块下的target文件夹下有打包完成的jar包。 可用下面命令运行该jar包1java -jar web-0.0.1-SNAPSHOT.jar 四、遇到的问题service模块无法注入data模块的repo类(data模块用的是jpa),web模块无法注入service模块的service类一开始怀疑是没扫描到该层的包，所以在web子模块的WebApplication类上增加注解@ComponentScan(&quot;com.xpp&quot;)不起作用,最后搜索到一篇文章。解决方法：移动web模块的WebApplication类 一开始WebApplication类的位置如图： 右键WebApplication类，选择Refactor-&gt;Move 弹出： 将com.xpp.web修改成com.xpp,修改后点击Refactor 最终WebApplication类的位置：]]></content>
